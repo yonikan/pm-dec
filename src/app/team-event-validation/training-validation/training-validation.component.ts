@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingValidationComponent implements OnInit {
 
-  constructor() { }
+  // constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
   }

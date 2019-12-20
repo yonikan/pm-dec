@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { routes } from './team-event-validation.routes';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { MatchValidationComponent } from './match-validation/match-validation.component';
 import { TrainingValidationComponent } from './training-validation/training-validation.component';
 import { StepTrainingGeneralComponent } from './training-validation/step-training-general/step-training-general.component';
@@ -14,6 +15,7 @@ import { StepMatchFormationsComponent } from './match-validation/step-match-form
 import { StepMatchPhasesComponent } from './match-validation/step-match-phases/step-match-phases.component';
 import { StepMatchSubsComponent } from './match-validation/step-match-subs/step-match-subs.component';
 import { TagsComponent } from './common/tags/tags.component';
+import { SpeedGraphComponent } from './common/speed-graph/speed-graph.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { TagsComponent } from './common/tags/tags.component';
     StepMatchPhasesComponent,
     StepMatchSubsComponent,
     TagsComponent,
+    SpeedGraphComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
+    HighchartsChartModule
   ]
 })
 export class TeamEventValidationModule { }

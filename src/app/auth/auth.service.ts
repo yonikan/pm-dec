@@ -83,6 +83,7 @@ export class AuthService {
             this.isAuthenticated = true;
             this.authStatusListener.next(true);
             this.router.navigate(['team-event-validation/training/1']);
+            // this.router.navigate(['team-event-validation/match/1']);
           }
         },
         (error) => {
