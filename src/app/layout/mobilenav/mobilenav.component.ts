@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
+import { UserLogin } from 'src/app/auth/user-login.model';
+import { StaffRoles } from 'src/app/core/enums/staff-roles.enum';
 
 @Component({
   selector: 'app-mobilenav',
@@ -8,14 +10,29 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./mobilenav.component.scss']
 })
 export class MobilenavComponent implements OnInit {
-
   @Output() closeSidenav = new EventEmitter<void>();
   isAuthenticated = false;
   private authStatusSub: Subscription;
 
+  userLoginData: UserLogin;
+  private userLoginDataSub: Subscription;
+  userImgUrl: string;
+  userFirstName: string;
+  userLastName: string;
+  userRole: any;
+
   constructor(public authService: AuthService) {}
 
   ngOnInit() {
+    this.userLoginDataSub = this.authService
+    .getUserLoginDataListener()
+    .subscribe((userLoginData: UserLogin) => {
+      this.userImgUrl = userLoginData.imgUrl;
+      this.userFirstName = userLoginData.firstName;
+      this.userLastName = userLoginData.lastName;
+      this.userRole = StaffRoles[userLoginData.role];
+    });
+
     this.authStatusSub = this.authService
       .getAuthStatusListener()
       .subscribe((authStatus: boolean) => {
@@ -33,6 +50,7 @@ export class MobilenavComponent implements OnInit {
   }
 
   ngOnDestroy(){
+    this.userLoginDataSub.unsubscribe();
     this.authStatusSub.unsubscribe();
   }
 }
