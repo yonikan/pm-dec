@@ -6,16 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./training-validation.component.scss']
 })
 export class TrainingValidationComponent implements OnInit {
-  trainingTags;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onTagsEmitter(tags) {
-    console.log(tags);
-    this.trainingTags = tags;
   }
 
 }

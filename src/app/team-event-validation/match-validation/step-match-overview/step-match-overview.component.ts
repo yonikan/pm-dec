@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-match-overview.component.scss']
 })
 export class StepMatchOverviewComponent implements OnInit {
-
+  matchesTags;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onTagsEmitter(tags) {
+    console.log(tags);
+    this.matchesTags = tags;
+  }
 }

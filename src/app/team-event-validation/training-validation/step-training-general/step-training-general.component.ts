@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-training-general.component.scss']
 })
 export class StepTrainingGeneralComponent implements OnInit {
-
+  trainingTags;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onTagsEmitter(tags) {
+    console.log(tags);
+    this.trainingTags = tags;
+  }
 }
