@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamEventValidationService } from '../team-event-validation.service';
 
 @Component({
   selector: 'app-match-validation',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchValidationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
   }

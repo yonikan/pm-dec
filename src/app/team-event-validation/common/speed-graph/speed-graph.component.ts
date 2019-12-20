@@ -18,7 +18,7 @@ export class SpeedGraphComponent implements OnInit {
   runOutsideAngular = false; // optional boolean, defaults to false
   chartOptions: any = {
     chart: {
-      type: 'column',
+      type: 'area',
       style: {
         fontFamily: 'Work Sans'
       },
@@ -36,22 +36,41 @@ export class SpeedGraphComponent implements OnInit {
       // type: 'datetime',
       plotLines: [
         {
-          color: '#f9b62b',
+          color: '#11cd69',
           value: 13.3,
-          width: 2
+          width: 4,
+          zIndex: 3
         },
         {
-          color: '#f9b62b',
+          color: '#11cd69',
           value: 13.7,
-          width: 2
+          width: 4,
+          zIndex: 3
         }
       ]
     },
     yAxis: {
       title: false
     },
+    
+    plotOptions: {
+      series: {
+          fillColor: {
+              linearGradient: [0, 0, 0, 300],
+              stops: [
+                  [0, Highcharts.getOptions().colors[0]],
+                  [1, Highcharts.getOptions().colors[1]],
+
+              ]
+          }
+      }
+  },
+
+
     series: [
       {
+        type: 'area',
+        color: '#621e6a',
         showInLegend: false,
         name: 'Line 1',
         data: [

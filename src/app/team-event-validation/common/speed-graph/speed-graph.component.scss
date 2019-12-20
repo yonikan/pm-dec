@@ -2,6 +2,17 @@
 @import '../../../../styles/mixins';
 
 :host {
+    .title {
+        h3 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #96a1ae;
+        }
+    }
+    
     .speed-graph-container {
         // height: 150px;
         // width: 300px;

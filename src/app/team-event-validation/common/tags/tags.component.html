@@ -1,4 +1,11 @@
-<mat-form-field class="example-chip-list">
+
+<div class="title">
+  <h3>training theme</h3>
+  <p>
+    Add training theme
+  </p>
+</div>
+<mat-form-field class="example-chip-list" appearance="outline">
         <mat-chip-list #chipList>
           <mat-chip *ngFor="let teamEventTag of teamEventTags" [selectable]="selectable" [removable]="removable" (removed)="remove(teamEventTag)">
             {{teamEventTag.name}} <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
