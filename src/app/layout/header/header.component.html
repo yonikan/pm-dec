@@ -17,6 +17,32 @@
 
       <div class="toolbar-right">
           <div class="actions">
+
+              <div class="">
+                  <button mat-button [matMenuTriggerFor]="appMenu" class="">
+                    <mat-icon class="icon">more_vert</mat-icon>
+                  </button>
+                  <mat-menu #appMenu="matMenu">
+                      <button mat-menu-item (click)="null">
+                          <span>support</span>
+                        </button>
+  
+                        <button mat-menu-item (click)="null">
+                            <span>contact us</span>
+                          </button>
+
+                          <button mat-menu-item (click)="null">
+                              <span>send feedback</span>
+                            </button>
+
+                            <button mat-menu-item (click)="null">
+                                <span>about playermaker</span>
+                              </button>
+                  </mat-menu>
+              </div>
+
+
+
               <div class="user-button-container">
                 <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
                   <img class="avatar" [src]="userImgUrl || ''">
@@ -24,6 +50,16 @@
                   <mat-icon class="icon">keyboard_arrow_down</mat-icon>
                 </button>
                 <mat-menu #userMenu="matMenu">
+                    <button mat-menu-item (click)="null">
+                        <mat-icon>settings</mat-icon>
+                        <span>settings</span>
+                      </button>
+
+                      <button mat-menu-item (click)="null">
+                          <mat-icon>settings</mat-icon>
+                          <span>prefernces</span>
+                        </button>
+
                     <button mat-menu-item (click)="onLogout()">
                       <mat-icon>exit_to_app</mat-icon>
                       <span>{{ 'layout.header.logout' | translate }}</span>
@@ -31,8 +67,6 @@
                 </mat-menu>
               </div>
           </div>
-
-          <mat-icon class="">more_vert</mat-icon>
 
           
       </div>

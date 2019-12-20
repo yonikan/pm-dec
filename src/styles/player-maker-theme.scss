@@ -11,7 +11,7 @@
   src: url('assets/fonts/Worksanssemibold.woff');
 };
 $pm-app-typography: mat-typography-config(
-  $font-family: 'Work Sans'
+  $font-family: 'Montserrat'
 );
 @include mat-core($pm-app-typography);
 $playermaker-theme: mat-light-theme(mat-palette($playermaker-primary-pink), mat-palette($playermaker-secondary-dark-blue));
