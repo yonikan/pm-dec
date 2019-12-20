@@ -23,8 +23,9 @@
     }
 
     .active {
-      background-color: rgba(0, 0, 0, 0.2);
-      color: #fff;
+      // background-color: rgba(0, 0, 0, 0.2);
+      color: #35083a;
+      // padding: 30px 41px;
     }
 
     .navigation-wrapper {
@@ -43,6 +44,14 @@
       align-items: center;
       padding: 15px;
       text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #cecece;
+
+      &:first-child {
+        margin-top: 35px;
+      }
+
       // transition: .5s;
 
       // &:hover {
@@ -54,6 +63,7 @@
     .nav-caption {
       margin-left: 10px;
       margin-right: 13px;
+      padding-top: 10px;
     }
 
     .nav-badge {

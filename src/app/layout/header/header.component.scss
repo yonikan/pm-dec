@@ -22,6 +22,9 @@
       // }
 
       .logo {
+        display: flex;
+        align-items: center;
+
         .logo-desktop {
           // height: 35px;
           width: 150px;
@@ -74,10 +77,13 @@
 
           mat-form-field {
             font-size: 13px;
+            
           }
+
           
           .user-button-container {
             padding-right: 10px;
+            
 
             .user-button {
               height: 100%;
@@ -90,8 +96,15 @@
                 border-radius: 50%;
               }
           
+              span {
+                color: #6d7680 !important;
+
+              }
+              
               .name {
                 margin: 0 8px 0 10px;
+                color: #6d7680 !important;
+
         
                 @media (max-width: $media-query-sm) {
                   display: none;
