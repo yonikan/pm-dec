@@ -1,5 +1,9 @@
 <mat-toolbar *ngIf="isAuthenticated" class="toolbar">
     <div class="toolbar-container">
+        <button mat-button class="hamburger-menu" (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
         <div class="logo">
             <img src="./assets/img/logo-large.jpg" alt="logo" class="logo-desktop">
             <img src="./assets/img/logo.png" alt="logo" class="logo-mobile">
