@@ -7,11 +7,13 @@
         
         <form [formGroup]="userLoginFormGroup" (submit)="onLogin()" *ngIf="!isLoading">
             <mat-form-field appearance="outline">
+                    <mat-icon matPrefix>phone</mat-icon>
                 <mat-label>{{ 'auth.general.enter-email-address' | translate }}</mat-label>
                 <input matInput type="email" formControlName="emailText">
             </mat-form-field>
             <mat-form-field>
-                <mat-label>{{ 'auth.general.enter-password' | translate }}</mat-label>
+                    <mat-icon matPrefix>phone</mat-icon>
+                    <mat-label>{{ 'auth.general.enter-password' | translate }}</mat-label>
                 <input id="password1" matInput type="password" formControlName="passwordText" showHideInput>
                 <i class="material-icons" matSuffix showHideTrigger="password1" [showHideStatus]="{ materialIcon: true, id: 'password1' }"></i>
             </mat-form-field>
@@ -19,7 +21,7 @@
                     (userLoginFormGroup.get('emailText').invalid || userLoginFormGroup.get('passwordText').invalid)">
                     {{ 'auth.general.incorrect-email-and/or-password' | translate }}
             </mat-error>
-            <button color="primary" [disabled]="!userLoginFormGroup.valid" class="login-button" *ngIf="!isLoading" type="submit" mat-raised-button>
+            <button [disabled]="!userLoginFormGroup.valid" class="login-button" *ngIf="!isLoading" type="submit" mat-raised-button>
                 {{ 'auth.user-login.user-login-button' | translate }}
             </button>
         </form>
