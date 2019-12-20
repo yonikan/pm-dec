@@ -44,7 +44,7 @@ export class TeamEventValidationService {
   validtaeTraining() {
     return {
       step1Data: {
-
+        
       },
       step2Data: {
         
