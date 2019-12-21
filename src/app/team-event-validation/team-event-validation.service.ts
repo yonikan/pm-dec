@@ -41,37 +41,11 @@ export class TeamEventValidationService {
     };
   }
 
-  validtaeTraining() {
-    return {
-      step1Data: {
-        
-      },
-      step2Data: {
-        
-      },
-      step3Data: {
-        
-      }
-    };
+  validtaeTraining(trainingValidationPayload) {
+    console.log('trainingValidationPayload: ', trainingValidationPayload);
   }
 
   validtaeMatch() {
-    return {
-      step1Data: {
 
-      },
-      step2Data: {
-        
-      },
-      step3Data: {
-        
-      },
-      step4Data: {
-        
-      },
-      step5Data: {
-        
-      }
-    };
   }
 }

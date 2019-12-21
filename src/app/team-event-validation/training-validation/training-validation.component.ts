@@ -11,6 +11,7 @@ export class TrainingValidationComponent implements OnInit {
   step1Data: any;
   step2Data: any;
   step3Data: any;
+  trainingValidationPayload;
 
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
@@ -22,17 +23,22 @@ export class TrainingValidationComponent implements OnInit {
   }
 
   onStepTrainingGeneral(handledData) {
-    console.log('handledData: ', handledData);
-
+    // console.log('handledData: ', handledData);
+    this.trainingValidationPayload.stepTrainingGeneral = handledData;
   }
 
   onStepTrainingPlayers(handledData) {
-    console.log('handledData: ', handledData);
-
+    // console.log('handledData: ', handledData);
+    this.trainingValidationPayload.stepTrainingPlayers = handledData;
   }
 
   onStepTrainingPhases(handledData) {
-    console.log('handledData: ', handledData);
-    
+    // console.log('handledData: ', handledData);
+    this.trainingValidationPayload.stepTrainingPhases = handledData;
+    this.validateSession(); // last step
+  }
+
+  validateSession() {
+    this.teamEventValidationService.validtaeTraining(this.trainingValidationPayload);
   }
 }
