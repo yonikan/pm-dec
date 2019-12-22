@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-step-training-general',
@@ -7,7 +7,6 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class StepTrainingGeneralComponent implements OnInit {
   @Input() stepTrainingGeneralData: any; 
-  @Output() stepTrainingGeneralEmitter = new EventEmitter<any>();
   trainingTags;
 
   constructor() { }
@@ -18,9 +17,5 @@ export class StepTrainingGeneralComponent implements OnInit {
   onTagsEmitter(tags) {
     console.log(tags);
     this.trainingTags = tags;
-  }
-
-  outputData(data) {
-    this.stepTrainingGeneralEmitter.emit(data);
   }
 }

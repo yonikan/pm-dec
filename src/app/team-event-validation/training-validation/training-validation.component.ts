@@ -7,7 +7,6 @@ import { TeamEventValidationService } from '../team-event-validation.service';
   styleUrls: ['./training-validation.component.scss']
 })
 export class TrainingValidationComponent implements OnInit {
-  selectedIndex = 0;
   step1Data: any;
   step2Data: any;
   step3Data: any;
@@ -16,29 +15,13 @@ export class TrainingValidationComponent implements OnInit {
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
-    const traininfData = this.teamEventValidationService.getTrainingData();
-    this.step1Data = traininfData.step1Data;
-    this.step2Data = traininfData.step2Data;
-    this.step3Data = traininfData.step3Data;
+    const trainingData = this.teamEventValidationService.getTrainingData();
+    this.step1Data = trainingData.step1Data;
+    this.step2Data = trainingData.step2Data;
+    this.step3Data = trainingData.step3Data;
   }
 
-  onStepTrainingGeneral(handledData) {
-    // console.log('handledData: ', handledData);
-    this.trainingValidationPayload.stepTrainingGeneral = handledData;
-  }
-
-  onStepTrainingPlayers(handledData) {
-    // console.log('handledData: ', handledData);
-    this.trainingValidationPayload.stepTrainingPlayers = handledData;
-  }
-
-  onStepTrainingPhases(handledData) {
-    // console.log('handledData: ', handledData);
-    this.trainingValidationPayload.stepTrainingPhases = handledData;
-    this.validateSession(); // last step
-  }
-
-  validateSession() {
-    this.teamEventValidationService.validtaeTraining(this.trainingValidationPayload);
+  validateTraining() {
+    this.teamEventValidationService.validateTraining();
   }
 }
