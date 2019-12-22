@@ -8,8 +8,7 @@ import * as moment from 'moment-timezone'
   templateUrl: './speed-graph.component.html',
   styleUrls: ['./speed-graph.component.scss']
 })
-export class SpeedGraphComponent implements OnInit {
-
+export class SpeedGraphComponent implements OnInit, OnChanges {
   @Input() timeDuration: any; 
   Highcharts: typeof Highcharts = Highcharts; // required
   chartConstructor = 'chart'; // optional string, defaults to 'chart'
@@ -22,8 +21,8 @@ export class SpeedGraphComponent implements OnInit {
       style: {
         fontFamily: 'Work Sans'
       },
-      height: 150,
-      backgroundColor: '#e1e1e1',
+      height: 210,
+      backgroundColor: '#ffffff',
       color: '#f9b62b'
     },
     title: {
@@ -36,37 +35,67 @@ export class SpeedGraphComponent implements OnInit {
       // type: 'datetime',
       plotLines: [
         {
+          color: '#cccccc',
+          value: 13,
+          width: 3,
+          zIndex: 3,
+          dashStyle: 'ShortDot',
+          label: { 
+            text: 'start',
+          }
+        },
+        {
+          color: '#cccccc',
+          value: 14.1,
+          width: 3,
+          zIndex: 3,
+          dashStyle: 'ShortDot',
+          label: { 
+            text: 'end',
+          }
+        },
+        {
           color: '#11cd69',
           value: 13.3,
-          width: 4,
+          width: 3,
           zIndex: 3
         },
         {
           color: '#11cd69',
           value: 13.7,
-          width: 4,
+          width: 3,
           zIndex: 3
         }
-      ]
+      ],
+      plotBands: [
+        {
+          color: '#e7e7e7',
+          from: 13.05,
+          to: 13.25,
+          label: { 
+            text: 'phase 1',
+          }
+        },
+        {
+          color: '#e7e7e7',
+          from: 13.35,
+          to: 13.55
+        },
+        {
+          color: '#e7e7e7',
+          from: 13.75,
+          to: 13.95
+        }
+    ],
     },
     yAxis: {
       title: false
     },
-    
     plotOptions: {
       series: {
-          fillColor: {
-              linearGradient: [0, 0, 0, 300],
-              stops: [
-                  [0, Highcharts.getOptions().colors[0]],
-                  [1, Highcharts.getOptions().colors[1]],
-
-              ]
-          }
+        fillOpacity: 0.1
       }
-  },
-
-
+    },
     series: [
       {
         type: 'area',

@@ -2,5 +2,14 @@
 @import '../../../styles/mixins';
 
 :host {
-    
+    .training0validation-container {
+        background-color: #ffffff;
+        padding: 25px;
+        margin: 15px;
+        width: 600px;
+
+        @media (max-width: $media-query-sm) {
+            width: 100%;
+        }
+    }
 }
