@@ -1,0 +1,15 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+
+:host {
+    .duration-container {
+        h3 {
+            font-size: 40px;
+        }
+    
+        p {
+            font-size: 20px;
+            color: #96a1ae;
+        }
+    }
+}

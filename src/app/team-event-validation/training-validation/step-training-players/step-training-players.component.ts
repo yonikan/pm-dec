@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StepTrainingPlayersComponent implements OnInit {
   @Input() stepTrainingPlayersData: any; 
-
+  trainingPlayers;
+  
   constructor() { }
 
   ngOnInit() {

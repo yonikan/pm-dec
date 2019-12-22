@@ -6,7 +6,7 @@ import { TrainingValidation, MatchValidation } from './team-event-validation.mod
 })
 export class TeamEventValidationService {
   trainingData: TrainingValidation = {
-    step1OverviewData: {
+    step1GeneralData: {
 
     },
     step2PlayersData: {

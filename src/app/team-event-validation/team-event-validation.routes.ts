@@ -3,7 +3,7 @@ import { TrainingValidationComponent } from './training-validation/training-vali
 import { MatchValidationComponent } from './match-validation/match-validation.component';
 
 export const routes: Routes = [
-    { path: '', component: TrainingValidationComponent },
+    // { path: '', component: TrainingValidationComponent },
     { path: 'training/:team-event-id', component: TrainingValidationComponent},
     { path: 'match/:team-event-id', component: MatchValidationComponent},
 ];

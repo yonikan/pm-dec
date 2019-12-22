@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StepTrainingPhasesComponent implements OnInit {
   @Input() stepTrainingPhasesData: any; 
-
+  trainingPhases;
+  
   constructor() { }
 
   ngOnInit() {

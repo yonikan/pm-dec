@@ -16,6 +16,8 @@ import { StepMatchPhasesComponent } from './match-validation/step-match-phases/s
 import { StepMatchSubsComponent } from './match-validation/step-match-subs/step-match-subs.component';
 import { TagsComponent } from './common/tags/tags.component';
 import { SpeedGraphComponent } from './common/speed-graph/speed-graph.component';
+import { TrainingDurationComponent } from './training-validation/step-training-general/training-duration/training-duration.component';
+import { MatchOverviewComponent } from './match-validation/step-match-overview/match-overview/match-overview.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { SpeedGraphComponent } from './common/speed-graph/speed-graph.component'
     StepMatchSubsComponent,
     TagsComponent,
     SpeedGraphComponent,
+    TrainingDurationComponent,
+    MatchOverviewComponent,
   ],
   imports: [
     CommonModule,

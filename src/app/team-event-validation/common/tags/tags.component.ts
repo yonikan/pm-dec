@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
   selector: 'app-tags',

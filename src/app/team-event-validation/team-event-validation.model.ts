@@ -1,5 +1,5 @@
 export interface TrainingValidation {
-    step1OverviewData: any;
+    step1GeneralData: any;
     step2PlayersData: any;
     step3PhasesData: any;
 }
